@@ -1,0 +1,60 @@
+{
+    "console": [
+        {
+            "id": 1,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 2,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 3,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 4,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 5,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 6,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          },
+          {
+            "id": 7,
+            "name": "Aloe",
+            "image": "./images/aloe.jpg",
+            "price": "36"
+          }
+    ],
+    "reviews":[
+          {
+            "id": 1,
+            "name": "Aloe",
+            "review": "./images/aloe.jpg",
+            "rating": "5"
+          },
+          {
+            "id": 2,
+            "name": "Aloe",
+            "review": "./images/aloe.jpg",
+            "rating": "5"
+          }
+    ]
+}
