@@ -3,8 +3,12 @@ import './Landing.module.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useNavigate } from 'react-router-dom';
 
 function Landing(){
+
+  const navigate = useNavigate()
+
  return(
     <Container fluid className='container' style={{
         paddingTop : '20px',
@@ -25,7 +29,7 @@ function Landing(){
          or dive into the latest titles, all in the palm of your hand. With powerful performance and a vast library of games from various platforms, the possibilities are endless.
         Don't miss out on the ultimate gaming experience – get your portable emulation console today and redefine how you game!</p>
         </div>
-        <Button variant="primary" size="lg" href='shop' style={{
+        <Button variant="primary" size="lg" onClick={()=>navigate('/shop')} style={{
             backgroundColor: 'black',
             color : 'white',
         }}>

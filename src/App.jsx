@@ -12,24 +12,59 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import { inputClasses } from '@mui/material';
 
 
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<Landing />} />
-      <Route path='/home' element={<Landing />}/>
-      <Route path='/shop' element={<Shop />}/>
-      <Route path='/cart' element={<Cart />}/>
-      <Route path='/reviews' element={<Reviews />}/>
-    </Route>
-    
-  )
-)
+
 
 
 function App() {
+
+
+  const [inCart, setInCart] = useState([])
+
+  function handleClickBeige(){
+    const newObj = {
+      color: 'Beige',
+      capacity: '32GB',
+      price: '59.99'
+    }
+    setInCart([...inCart,newObj])
+  }
+
+  function handleClickWhite(){
+    const newObj = {
+      color: 'White',
+      capacity: '64GB',
+      price: '69.99'
+    }
+    setInCart([...inCart,newObj])
+  }
+
+  function handleClickPurple(){
+    const newObj = {
+      color: 'Purple',
+      capacity: '128GB',
+      price: '79.99'
+    }
+    setInCart([...inCart,newObj])
+  }
+
+  console.log(inCart)
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Landing />} />
+        <Route path='/home' element={<Landing />}/>
+        <Route path='/shop' element={<Shop handleClickBeige={handleClickBeige} handleClickPurple={handleClickPurple} handleClickWhite={handleClickWhite}/>}/>
+        <Route path='/cart' element={<Cart inCart={inCart}/>}/>
+        <Route path='/reviews' element={<Reviews />}/>
+      </Route>
+      
+    )
+  )
 
   return (
     <>
