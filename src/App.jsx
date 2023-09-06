@@ -28,7 +28,8 @@ function App() {
     const newObj = {
       color: 'Beige',
       capacity: '32GB',
-      price: '59.99'
+      price: '59.99',
+      image: "https://m.media-amazon.com/images/I/51EmI3Vdt1L._AC_SL1100_.jpg"
     }
     setInCart([...inCart,newObj])
   }
@@ -37,7 +38,8 @@ function App() {
     const newObj = {
       color: 'White',
       capacity: '64GB',
-      price: '69.99'
+      price: '69.99',
+      image: "https://m.media-amazon.com/images/I/5160txSdNOL._AC_SL1100_.jpg"
     }
     setInCart([...inCart,newObj])
   }
@@ -46,7 +48,8 @@ function App() {
     const newObj = {
       color: 'Purple',
       capacity: '128GB',
-      price: '79.99'
+      price: '79.99',
+      image: "https://m.media-amazon.com/images/I/51lcOUZleqL._AC_SL1100_.jpg"
     }
     setInCart([...inCart,newObj])
   }
@@ -59,7 +62,7 @@ function App() {
         <Route index element={<Landing />} />
         <Route path='/home' element={<Landing />}/>
         <Route path='/shop' element={<Shop handleClickBeige={handleClickBeige} handleClickPurple={handleClickPurple} handleClickWhite={handleClickWhite}/>}/>
-        <Route path='/cart' element={<Cart inCart={inCart}/>}/>
+        <Route path='/cart' element={<Cart inCart={inCart} setInCart={setInCart}/>}/>
         <Route path='/reviews' element={<Reviews />}/>
       </Route>
       

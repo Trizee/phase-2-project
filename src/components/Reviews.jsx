@@ -25,9 +25,9 @@ function Reviews(){
     return(
     <>
         <h2 style={{textAlign: 'center',margin: '0'}}>See Reviews For Our Products</h2>
-        <Button variant="outlined" onClick={handleClickOpen} style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center'}}>
-        Write a Review
-      </Button>
+        <div class="d-grid gap-2 col-6 mx-auto">
+             <button class="btn btn-secondary" type="button" onClick={handleClickOpen}>Write a Review</button>
+         </div>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Write a Review</DialogTitle>
         <DialogContent>

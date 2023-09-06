@@ -1,5 +1,4 @@
 import { Button } from 'react-bootstrap';
-import './Landing.module.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,14 +10,14 @@ function Landing(){
 
  return(
     <Container fluid className='container' style={{
-        paddingTop : '20px',
+        paddingTop : '100px',
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'center',
         }}>
       <Row>
         <Col sm={8} style={{
-        paddingTop : '50px',
+        paddingTop : '175px',
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'center',
