@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Shop from './components/Shop';
 import Cart from './components/Cart'
 import Reviews from './components/Reviews';
+import Checkout from './components/Checkout';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,8 +22,10 @@ import { inputClasses } from '@mui/material';
 
 function App() {
 
-
+  const [total,setTotal] =useState(0)
   const [inCart, setInCart] = useState([])
+
+  console.log(total)
 
   function handleClickBeige(){
     const newObj = {
@@ -64,6 +67,7 @@ function App() {
         <Route path='/shop' element={<Shop handleClickBeige={handleClickBeige} handleClickPurple={handleClickPurple} handleClickWhite={handleClickWhite}/>}/>
         <Route path='/cart' element={<Cart inCart={inCart} setInCart={setInCart}/>}/>
         <Route path='/reviews' element={<Reviews />}/>
+        <Route path='/checkout' element={<Checkout total={total}/>} />
       </Route>
       
     )

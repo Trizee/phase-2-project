@@ -1,14 +1,8 @@
 {
     "reviews":[
-          {
-            "id": 1,
-            "name": "Aloe",
-            "review": "./images/aloe.jpg"
-          },
-          {
-            "id": 2,
-            "name": "Aloe",
-            "review": "./images/aloe.jpg"
-          }
+        
+    ],
+    "checkouts": [
+
     ]
 }
