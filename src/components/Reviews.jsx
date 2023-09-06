@@ -8,6 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 
+
 function Reviews(){
 
     const [open, setOpen] = useState(false);
@@ -23,8 +24,8 @@ function Reviews(){
 
     return(
     <>
-        <h2 style={{textAlign: 'center'}}>See Reviews For Our Products</h2>
-        <Button variant="outlined" onClick={handleClickOpen}>
+        <h2 style={{textAlign: 'center',margin: '0'}}>See Reviews For Our Products</h2>
+        <Button variant="outlined" onClick={handleClickOpen} style={{alignItems: 'center', justifyContent: 'center', textAlign: 'center'}}>
         Write a Review
       </Button>
       <Dialog open={open} onClose={handleClose}>
@@ -51,7 +52,9 @@ function Reviews(){
             fullWidth
             variant="standard"
           />
+          
         </DialogContent>
+        
         <DialogActions>
           <Button onClick={handleClose}>Submit</Button>
         </DialogActions>
