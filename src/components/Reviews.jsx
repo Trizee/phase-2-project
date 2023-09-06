@@ -28,7 +28,7 @@ function Reviews(){
         Write a Review
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Subscribe</DialogTitle>
+        <DialogTitle>Write a Review</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Give us your honest feedback!
