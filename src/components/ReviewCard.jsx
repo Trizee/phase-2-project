@@ -47,7 +47,7 @@ function ReviewCard({data, deleteReview}){
     return (
       <>
         <Card style={{padding: '10px' , margin: '10px'}}>
-          <Card.Header style={{textAlign: 'center'}}>Review
+          <Card.Header style={{textAlign: 'center', textAlign: 'left' }}>Review
           <Button variant="text" color="error" style={{float: 'right'}} onClick={()=> deleteReview(data)}>
           🗑️
           </Button> 

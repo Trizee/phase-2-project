@@ -2,7 +2,7 @@
   "reviews": [
     {
       "name": "Elephant",
-      "review": "This is so cool",
+      "review": "This thing sucks",
       "id": 1
     },
     {
@@ -61,6 +61,20 @@
       "address": "123123",
       "card": "12341234123412",
       "id": 5
+    },
+    {
+      "amount": 129.98,
+      "name": "qwe",
+      "address": "123123",
+      "card": "41234",
+      "id": 6
+    },
+    {
+      "amount": 129.98,
+      "name": "12312",
+      "address": "123123",
+      "card": "78787878787878787878",
+      "id": 7
     }
   ]
 }

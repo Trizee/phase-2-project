@@ -7,6 +7,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 
 
@@ -16,6 +18,7 @@ function Reviews(){
     const [name,setName] = useState('')
     const [review, setReview] = useState('')
     const [reviewArray, setReviewArray] = useState([])
+    const [loading ,setLoading] = useState(false)
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -26,6 +29,12 @@ function Reviews(){
     };
 
     useEffect(()=>{
+
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000)
+
       fetch('http://localhost:3000/reviews')
       .then(r => r.json())
       .then(data => setReviewArray(data))
@@ -63,7 +72,11 @@ function Reviews(){
         <div className="d-grid gap-2 col-6 mx-auto">
              <button className="btn btn-secondary" type="button" onClick={handleClickOpen}>Write a Review</button>
          </div>
-         {reviewDisplay}
+         {loading ? (
+          <Box sx={{ display: 'flex' , alignContent: 'center', justifyContent: 'center', padding: '20vh'}}>
+          <CircularProgress color="inherit"/>
+        </Box>
+         ): reviewDisplay }
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Write a Review</DialogTitle>
         <DialogContent>

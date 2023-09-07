@@ -14,6 +14,7 @@ function ThankYouPage({customerName}){
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'center',
+        paddingBottom: '35vh'
         }}>
       <Row>
         <Col  style={{
