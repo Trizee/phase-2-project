@@ -10,8 +10,10 @@ import { useState } from 'react';
 
 function ReviewCard({data, deleteReview}){
 
-    const {name , review} = data
+    const {name} = data
 
+    const [review, setReview] = useState(data.review)
+    const [newReview , setNewReview] = useState('')
     const [open, setOpen] = useState(false);
     const handleClickOpen = () => {
       setOpen(true);
@@ -22,6 +24,26 @@ function ReviewCard({data, deleteReview}){
     };
     
 
+    console.log(newReview)
+
+    function updateReview(data){
+      fetch(`http://localhost:3000/reviews/${data.id}`,{
+      
+      Accept: "application/json",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: 'PATCH',
+
+      body: JSON.stringify({
+        review : newReview
+      })
+      })
+      .then(r => r.json())
+      .then(data => setReview(data.review))
+      handleClose()
+    }
+  
     return (
       <>
         <Card style={{padding: '10px' , margin: '10px'}}>
@@ -59,12 +81,13 @@ function ReviewCard({data, deleteReview}){
              type="text"
              fullWidth
              variant="standard"
+             onChange={(e)=>setNewReview(e.target.value)}
            />
            
          </DialogContent>
          
          <DialogActions>
-           <Button>Submit</Button>
+           <Button onClick={()=>updateReview(data)}>Submit</Button>
          </DialogActions>
        </Dialog>
       </>
