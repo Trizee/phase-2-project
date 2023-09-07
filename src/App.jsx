@@ -59,8 +59,6 @@ function App() {
     setInCart([...inCart,newObj])
   }
 
-  console.log(inCart)
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>

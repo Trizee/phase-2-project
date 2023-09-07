@@ -44,8 +44,8 @@ function Shop({handleClickBeige,handleClickPurple,handleClickWhite}){
                             </div>
             
                         <div className="d-flex flex-row">
-                            <div class="d-grid gap-2 col-10 mx-auto">
-                            <button class="btn btn-secondary" type="button" onClick={handleClickBeige}>Add To Cart</button>
+                            <div className="d-grid gap-2 col-10 mx-auto">
+                            <button className="btn btn-secondary" type="button" onClick={handleClickBeige}>Add To Cart</button>
                             </div>
                         </div>
                         </MDBCardBody>
@@ -76,8 +76,8 @@ function Shop({handleClickBeige,handleClickPurple,handleClickWhite}){
                             </div>
 
                         <div className="d-flex flex-row">
-                        <div class="d-grid gap-2 col-10 mx-auto">
-                            <button class="btn btn-secondary" type="button" onClick={handleClickWhite}>Add To Cart</button>
+                        <div className="d-grid gap-2 col-10 mx-auto">
+                            <button className="btn btn-secondary" type="button" onClick={handleClickWhite}>Add To Cart</button>
                             </div>
                         </div>
                         </MDBCardBody>
@@ -105,16 +105,16 @@ function Shop({handleClickBeige,handleClickPurple,handleClickWhite}){
                             <div className="d-flex flex-column mb-4 lead">
                             <span className="mb-2">128GB</span>
                             </div>
-                            <div class="d-grid gap-2 col-10 mx-auto">
-                            <button class="btn btn-secondary" type="button" onClick={handleClickPurple}>Add To Cart</button>
+                            <div className="d-grid gap-2 col-10 mx-auto">
+                            <button className="btn btn-secondary" type="button" onClick={handleClickPurple}>Add To Cart</button>
                             </div>
                         </MDBCardBody>
                     </MDBCard>
                     </MDBCol>
                 </MDBRow>
                 </MDBContainer>
-                <div class="d-grid gap-2 col-4 mx-auto" style={{paddingBottom: '50px'}}>
-                    <button class="btn btn-secondary" type="button" onClick={()=>navigate('/cart')}>Go To Cart</button>
+                <div className="d-grid gap-2 col-4 mx-auto" style={{paddingBottom: '50px'}}>
+                    <button className="btn btn-secondary" type="button" onClick={()=>navigate('/cart')}>Go To Cart</button>
                 </div>
         </>
     )

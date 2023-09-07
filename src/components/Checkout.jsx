@@ -31,7 +31,8 @@ function Checkout({total, setInCart ,setCustomerName}){
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        padding: '10vw'
+        padding: '10vw',
+        paddingBottom: '30vh'
      }}>
         <h1>Total: $ {total} </h1>
          <Form onSubmit={postPayment}>
