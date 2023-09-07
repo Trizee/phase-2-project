@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import ReviewCard from './ReviewCard';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -24,6 +25,12 @@ function Reviews(){
       setOpen(false);
     };
 
+    useEffect(()=>{
+      fetch('http://localhost:3000/reviews')
+      .then(r => r.json())
+      .then(data => setReviewArray(data))
+    },[])
+
     function postReview(){
       const newReview ={
         name: name,
@@ -39,6 +46,7 @@ function Reviews(){
       handleClose()
     }
   
+    const reviewDisplay = reviewArray.map(individualCard => <ReviewCard data={individualCard}/>)
 
     return(
     <>
@@ -46,6 +54,7 @@ function Reviews(){
         <div class="d-grid gap-2 col-6 mx-auto">
              <button class="btn btn-secondary" type="button" onClick={handleClickOpen}>Write a Review</button>
          </div>
+         {reviewDisplay}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Write a Review</DialogTitle>
         <DialogContent>
