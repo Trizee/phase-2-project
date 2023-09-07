@@ -7,11 +7,12 @@ import {
     MDBCardImage,
     MDBCardTitle,
   } from "mdb-react-ui-kit";
+import { useNavigate } from 'react-router-dom';
 
 function Shop({handleClickBeige,handleClickPurple,handleClickWhite}){
 
 
-
+    const navigate = useNavigate()
 
 
     return(
@@ -112,6 +113,9 @@ function Shop({handleClickBeige,handleClickPurple,handleClickWhite}){
                     </MDBCol>
                 </MDBRow>
                 </MDBContainer>
+                <div class="d-grid gap-2 col-4 mx-auto" style={{paddingBottom: '50px'}}>
+                    <button class="btn btn-secondary" type="button" onClick={()=>navigate('/cart')}>Go To Cart</button>
+                </div>
         </>
     )
 }

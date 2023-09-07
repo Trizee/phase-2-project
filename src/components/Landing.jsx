@@ -22,7 +22,7 @@ function Landing(){
         textAlign: 'center',
         justifyContent: 'center',
         }}>
-        <div className='heropage'>
+        <div>
         <h1>Experience the Future of Gaming Anywhere, Anytime with Our Portable Emulation Console!</h1>
         <p>Discover a new era of gaming with our cutting-edge portable emulation console. Embrace nostalgia as you play classic games
          or dive into the latest titles, all in the palm of your hand. With powerful performance and a vast library of games from various platforms, the possibilities are endless.
@@ -35,7 +35,7 @@ function Landing(){
           Get Started
         </Button>
         </Col>
-        <Col sm={2}><img className='heroimg' src='public/1d52e8380623022311d60d2a501a7b8.jpg'/></Col>
+        <Col sm={2}><img src='public/1d52e8380623022311d60d2a501a7b8.jpg'/></Col>
       </Row>
       <Row>
         <Col></Col>

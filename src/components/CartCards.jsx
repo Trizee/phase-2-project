@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 function CartCards({indiviualCard, handleRemove}){
     return(
-    <Card className="text-center">
+    <Card className="text-center" style={{margin: '10px'}}>
       <Card.Header>Product</Card.Header>
       <Card.Body>
       <Card.Img src={indiviualCard.image} style={{maxHeight: '80px', maxWidth:'80px'}}/>
