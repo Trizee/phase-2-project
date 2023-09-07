@@ -1,8 +1,10 @@
 {
-    "reviews":[
-        
-    ],
-    "checkouts": [
-
-    ]
+  "reviews": [
+    {
+      "name": "Elephant",
+      "review": "This is so cool",
+      "id": 1
+    }
+  ],
+  "checkouts": []
 }

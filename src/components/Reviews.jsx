@@ -12,6 +12,9 @@ import DialogTitle from '@mui/material/DialogTitle';
 function Reviews(){
 
     const [open, setOpen] = useState(false);
+    const [name,setName] = useState('')
+    const [review, setReview] = useState('')
+    const [reviewArray, setReviewArray] = useState([])
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -20,6 +23,21 @@ function Reviews(){
     const handleClose = () => {
       setOpen(false);
     };
+
+    function postReview(){
+      const newReview ={
+        name: name,
+        review: review
+      }
+      fetch('http://localhost:3000/reviews',{
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newReview)
+    })
+      .then(r => r.json())
+      .then(data => setReviewArray([...reviewArray,data]))
+      handleClose()
+    }
   
 
     return(
@@ -42,6 +60,7 @@ function Reviews(){
             type="name"
             fullWidth
             variant="standard"
+            onChange={(e)=>setName(e.target.value)}
           />
            <TextField
             autoFocus
@@ -51,12 +70,13 @@ function Reviews(){
             type="text"
             fullWidth
             variant="standard"
+            onChange={(e)=>setReview(e.target.value)}
           />
           
         </DialogContent>
         
         <DialogActions>
-          <Button onClick={handleClose}>Submit</Button>
+          <Button onClick={()=>postReview()}>Submit</Button>
         </DialogActions>
       </Dialog>
     </>
