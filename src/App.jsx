@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RootLayout from './layout/RootLayout';
 import Landing from './components/Landing';
@@ -13,19 +13,19 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import { inputClasses } from '@mui/material';
-
-
-
 
 
 
 function App() {
 
-  const [total,setTotal] =useState(0)
+  const [total,setTotal] =useState('0')
   const [inCart, setInCart] = useState([])
 
-  console.log(total)
+  const totalPrice = inCart.reduce((sum, product) => sum + parseFloat(product.price), 0);
+  
+  useEffect(()=>{
+    setTotal(totalPrice)
+  },[inCart])
 
   function handleClickBeige(){
     const newObj = {

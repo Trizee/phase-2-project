@@ -5,7 +5,7 @@ function ReviewCard({data}){
     const {name , review} = data
 
     return (
-        <Card style={{padding: '10px'}}>
+        <Card style={{padding: '10px' , margin: '10px'}}>
           <Card.Header style={{textAlign: 'center'}}>Review</Card.Header>
           <Card.Body>
             <blockquote className="blockquote mb-0">
