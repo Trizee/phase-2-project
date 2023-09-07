@@ -15,8 +15,8 @@ function Cart({inCart, setInCart}){
     <>
         <h2 style={{textAlign:'center'}}>In Your Cart</h2>
         {cartDisplay}
-        <div class="d-grid gap-2 col-6 mx-auto">
-             <button class="btn btn-secondary" type="button" onClick={()=>navigate('/checkout')}>Checkout</button>
+        <div className="d-grid gap-2 col-6 mx-auto">
+             <button className="btn btn-secondary" type="button" onClick={()=>navigate('/checkout')}>Checkout</button>
          </div>
     </>
     )

@@ -55,13 +55,13 @@ function Reviews(){
        .then(data => setReviewArray(reviewArray.filter(card => card.id !== review.id)))
     }
   
-    const reviewDisplay = reviewArray.map(individualCard => <ReviewCard data={individualCard} deleteReview={deleteReview}/>)
+    const reviewDisplay = reviewArray.map(individualCard => <ReviewCard key={individualCard.id} data={individualCard} deleteReview={deleteReview}/>)
 
     return(
     <>
         <h2 style={{textAlign: 'center',margin: '0'}}>See Reviews For Our Products</h2>
-        <div class="d-grid gap-2 col-6 mx-auto">
-             <button class="btn btn-secondary" type="button" onClick={handleClickOpen}>Write a Review</button>
+        <div className="d-grid gap-2 col-6 mx-auto">
+             <button className="btn btn-secondary" type="button" onClick={handleClickOpen}>Write a Review</button>
          </div>
          {reviewDisplay}
       <Dialog open={open} onClose={handleClose}>
