@@ -1,12 +1,22 @@
 import Card from 'react-bootstrap/Card';
+import { Button } from '@mui/material';
 
-function ReviewCard({data}){
+function ReviewCard({data, deleteReview}){
 
     const {name , review} = data
+    
 
     return (
         <Card style={{padding: '10px' , margin: '10px'}}>
-          <Card.Header style={{textAlign: 'center'}}>Review</Card.Header>
+          <Card.Header style={{textAlign: 'center'}}>Review
+          <Button variant="text" color="error" style={{float: 'right'}} onClick={()=> deleteReview(data)}>
+          🗑️
+          </Button> 
+          <Button variant="text" color="error" style={{float: 'right'}}>
+          📝
+          </Button> 
+          
+          </Card.Header>
           <Card.Body>
             <blockquote className="blockquote mb-0">
               <p>

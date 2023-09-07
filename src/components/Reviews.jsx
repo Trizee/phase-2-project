@@ -45,8 +45,17 @@ function Reviews(){
       .then(data => setReviewArray([...reviewArray,data]))
       handleClose()
     }
+
+    function deleteReview(review){
+      console.log(review.id)
+      fetch(`http://localhost:3000/reviews/${review.id}`,{
+        method: 'DELETE',
+       })
+       .then(r=>r.json())
+       .then(data => setReviewArray(reviewArray.filter(card => card.id !== review.id)))
+    }
   
-    const reviewDisplay = reviewArray.map(individualCard => <ReviewCard data={individualCard}/>)
+    const reviewDisplay = reviewArray.map(individualCard => <ReviewCard data={individualCard} deleteReview={deleteReview}/>)
 
     return(
     <>

@@ -11,19 +11,9 @@
       "id": 2
     },
     {
-      "name": "Elephant",
-      "review": "This is so cool",
-      "id": 3
-    },
-    {
       "name": "Juan ",
       "review": "Awesome product Tri is so cool",
       "id": 6
-    },
-    {
-      "name": "Elephant",
-      "review": "This is so cool",
-      "id": 7
     }
   ],
   "checkouts": [
@@ -40,6 +30,13 @@
       "address": "123",
       "card": "123123",
       "id": 2
+    },
+    {
+      "amount": 149.98,
+      "name": "Juan",
+      "address": "123123123",
+      "card": "12312312313",
+      "id": 3
     }
   ]
 }
