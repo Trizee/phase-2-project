@@ -19,6 +19,11 @@
       "name": "Elephant",
       "review": "This is so cool",
       "id": 7
+    },
+    {
+      "name": "Elephant",
+      "review": "This thing sucks",
+      "id": 8
     }
   ],
   "checkouts": [

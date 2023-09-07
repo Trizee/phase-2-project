@@ -14,6 +14,7 @@ function Landing(){
         alignItems: 'center',
         textAlign: 'center',
         justifyContent: 'center',
+        paddingBottom: '25vh'
         }}>
       <Row>
         <Col sm={8} style={{
